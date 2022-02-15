@@ -1,0 +1,13 @@
+#!/bin/bash
+
+msg=""
+
+if [[ $1 ]]
+then
+  msg="$@"
+fi
+
+git add -A
+git commit -m "$msg"
+git pull
+git push
